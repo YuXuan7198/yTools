@@ -81,14 +81,14 @@ const filteredTools = computed(() => {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 12px;
-  background: #fff;
+  background: var(--bg);
   color: var(--text);
   outline: none;
   transition: border-color 120ms;
 }
 
-.search-input:focus { border-color: var(--accent); }
-.search-input::placeholder { color: #bbb; }
+.search-input:focus { border-color: var(--accent); background: #fff; }
+.search-input::placeholder { color: #c4b8a8; }
 
 .tool-list {
   flex: 1;
@@ -115,12 +115,12 @@ const filteredTools = computed(() => {
   transition: background 100ms;
 }
 
-.tool-item:hover { background: #eaeaea; }
+.tool-item:hover { background: #ebe4d8; }
 
 .tool-item.active {
-  background: #fff;
+  background: var(--bg);
   font-weight: 600;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
 }
 
 .tool-icon { font-size: 15px; flex-shrink: 0; }

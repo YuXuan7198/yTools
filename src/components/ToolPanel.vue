@@ -267,7 +267,7 @@ onUnmounted(() => {
   font-size: 13px;
   line-height: 1.6;
   color: var(--text);
-  background: #fafafa;
+  background: #faf8f4;
   resize: none;
   outline: none;
   transition: border-color 120ms;
@@ -279,8 +279,8 @@ onUnmounted(() => {
 }
 
 .output-area {
-  background: #f9fafb;
-  color: #374151;
+  background: #f6f3ec;
+  color: var(--output-color);
 }
 
 /* Footer */
@@ -303,21 +303,22 @@ onUnmounted(() => {
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
-  background: #fff;
+  background: var(--bg);
   color: var(--text);
   transition: background 100ms, border-color 100ms;
   white-space: nowrap;
 }
 
-.btn:hover { background: #f0f0f0; }
+.btn:hover { background: #f0ebe0; }
 
 .btn-active {
   background: var(--accent);
   color: #fff;
   border-color: var(--accent);
+  box-shadow: 0 1px 3px rgba(212, 168, 83, 0.25);
 }
 
-.btn-active:hover { opacity: 0.9; background: var(--accent); }
+.btn-active:hover { opacity: 0.92; background: var(--accent-hover); }
 
 /* Tool-specific controls */
 .algo-select {
@@ -326,7 +327,7 @@ onUnmounted(() => {
   border-radius: var(--radius-sm);
   font-size: 12px;
   font-family: inherit;
-  background: #fff;
+  background: var(--bg);
   color: var(--text);
   outline: none;
   cursor: pointer;
@@ -339,12 +340,12 @@ onUnmounted(() => {
   border-radius: var(--radius-sm);
   font-size: 12px;
   font-family: var(--font-mono);
-  background: #fafafa;
+  background: #faf8f4;
   color: var(--accent);
   outline: none;
 }
 
-.regex-input:focus { border-color: var(--accent); }
+.regex-input:focus { border-color: var(--accent); background: #fff; }
 
 .regex-flags-input {
   width: 60px;
@@ -352,7 +353,7 @@ onUnmounted(() => {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 12px;
-  background: #fafafa;
+  background: #faf8f4;
   color: var(--text);
   outline: none;
 }
