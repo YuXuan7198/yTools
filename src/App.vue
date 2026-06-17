@@ -24,8 +24,8 @@ const tools = [
   { id: 'json',      name: 'JSON 格式化',     icon: '📋', placeholder: '输入 JSON 字符串...' },
   { id: 'base64',    name: 'Base64 编解码',   icon: '🔐', placeholder: '输入要编码/解码的文本...' },
   { id: 'timestamp', name: '时间戳转换',      icon: '🕐', placeholder: '输入 Unix 时间戳或日期时间...' },
-  { id: 'unicode',   name: 'Unicode 转换',    icon: '🔤', placeholder: '输入文本或 \uXXXX 转义序列...' },
-  { id: 'hash',      name: 'MD5 / SHA 哈希',  icon: '🔒', placeholder: '输入要计算哈希的文本...' },
+  { id: 'unicode',   name: 'Unicode 转换',    icon: '🔤', placeholder: '输入文本或 \\uXXXX 转义序列...' },
+  { id: 'hash',      name: 'SHA 哈希',        icon: '🔒', placeholder: '输入要计算哈希的文本...' },
   { id: 'regex',     name: '正则测试',        icon: '🔍', placeholder: '输入测试文本...' },
 ]
 
