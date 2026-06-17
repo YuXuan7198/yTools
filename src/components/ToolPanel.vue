@@ -263,7 +263,7 @@ onUnmounted(() => {
   padding: 14px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  font-family: "SF Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1.6;
   color: var(--text);
@@ -338,7 +338,7 @@ onUnmounted(() => {
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   font-size: 12px;
-  font-family: "SF Mono", "Menlo", "Consolas", monospace;
+  font-family: var(--font-mono);
   background: #fafafa;
   color: var(--accent);
   outline: none;
