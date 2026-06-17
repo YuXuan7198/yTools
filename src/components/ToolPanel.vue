@@ -94,7 +94,7 @@
 </template>
 
 <script setup>
-import { ref, computed, watch } from 'vue'
+import { ref, computed, watch, onUnmounted } from 'vue'
 import {
   encodeUrl, decodeUrl,
   formatJson, compressJson,
@@ -168,7 +168,9 @@ function computeOutput() {
       output.value = uniMode.value === 'encode' ? unicodeEncode(input.value) : unicodeDecode(input.value)
       break
     case 'hash':
-      hashText(input.value, hashAlgo.value).then(v => { output.value = v })
+      hashText(input.value, hashAlgo.value)
+        .then(v => { output.value = v })
+        .catch(e => { output.value = `Error: ${e.message}` })
       break
     case 'regex': {
       const result = testRegex(regexPattern.value, regexFlags.value, input.value)
@@ -202,6 +204,10 @@ function doClear() {
   input.value = ''
   output.value = ''
 }
+
+onUnmounted(() => {
+  clearTimeout(copyTimer)
+})
 </script>
 
 <style scoped>
